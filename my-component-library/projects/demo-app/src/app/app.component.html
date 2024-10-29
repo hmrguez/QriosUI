@@ -1,42 +1,6 @@
-<!-- Basic usage -->
-<app-button accent="warning" >
-    Click Me
-</app-button>
-
-<!-- With leading icon -->
-<app-button
-        accent="success"
-        iconLeading="check_circle"
->
-    Save Changes
-</app-button>
-
-<!-- With trailing icon -->
-<app-button
-        accent="info"
-        iconTrailing="arrow_forward"
->
-    Next Step
-</app-button>
-
-<!-- Loading state -->
-<app-button
-        accent="secondary"
-        [loading]="true"
->
-    Submit Form
-</app-button>
-
-<!-- Disabled state -->
-<app-button
-        accent="danger"
-        [disabled]="true"
-        iconLeading="delete"
->
-    Delete Item
-</app-button>
-
-<!-- Different sizes -->
-<app-button size="sm">Small</app-button>
-<app-button size="md">Medium</app-button>
-<app-button size="lg">Large</app-button>
+<lib-text-input
+        [(value)]="username"
+        placeholder="Enter your username"
+        icon="fire"
+        [disabled]="isDisabled"
+></lib-text-input>
