@@ -1,25 +1,42 @@
-<app-card class="container mx-auto max-w-[400px]" accent="neutral">
-    <!-- Tags -->
-    <div class="flex gap-2 mb-3">
-    <span class="px-2 py-1 rounded-md text-sm bg-[rgba(207,221,255,0.7)] text-blue-700">
-      #website
-    </span>
-        <span class="px-2 py-1 rounded-md text-sm bg-[rgba(207,255,228,0.7)] text-green-700">
-      #development
-    </span>
-    </div>
+<!-- Basic usage -->
+<app-button accent="warning" >
+    Click Me
+</app-button>
 
-    <!-- Title -->
-    <h3 cardTitle class="text-lg font-semibold">Project Title</h3>
+<!-- With leading icon -->
+<app-button
+        accent="success"
+        iconLeading="check_circle"
+>
+    Save Changes
+</app-button>
 
-    <!-- Subtitle -->
-    <p cardSubtitle class="text-sm text-opacity-75">Project Description</p>
+<!-- With trailing icon -->
+<app-button
+        accent="info"
+        iconTrailing="arrow_forward"
+>
+    Next Step
+</app-button>
 
-    <!-- Actions -->
-    <button cardActions class="text-sm">
-        <!-- Action content -->
-    </button>
+<!-- Loading state -->
+<app-button
+        accent="secondary"
+        [loading]="true"
+>
+    Submit Form
+</app-button>
 
-    <!-- Content -->
-    <p>Card content goes here</p>
-</app-card>
+<!-- Disabled state -->
+<app-button
+        accent="danger"
+        [disabled]="true"
+        iconLeading="delete"
+>
+    Delete Item
+</app-button>
+
+<!-- Different sizes -->
+<app-button size="sm">Small</app-button>
+<app-button size="md">Medium</app-button>
+<app-button size="lg">Large</app-button>

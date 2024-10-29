@@ -1,6 +1,10 @@
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-  <i class="material-icons">home</i>
-  <i class="material-icons">favorite</i>
-  <i class="material-icons">face</i>
-  <ng-content></ng-content>
+<button
+        [class]=buttonClasses
+        (click)="onClick()"
+        [disabled]="disabled || loading"
+>
+    <span class="material-icons mr-2" *ngIf="!loading">{{ icon }}</span>
+    <span *ngIf="loading" class="material-icons animate-spin mr-2">autorenew</span>
+    {{ label }}
+    <ng-content></ng-content>
 </button>

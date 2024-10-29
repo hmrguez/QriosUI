@@ -12,4 +12,5 @@ import {CardComponent} from "../../../my-lib/src/lib/card/card.component";
 })
 export class AppComponent {
   title = 'demo-app';
+  protected readonly console = console;
 }
